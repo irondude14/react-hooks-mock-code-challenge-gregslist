@@ -1,16 +1,27 @@
-import React from "react";
-import Search from "./Search";
+import React from 'react';
+import Search from './Search';
 
-function Header() {
+function Header({
+  setSearchResult,
+  searchResult,
+  onHandleSearchBar,
+  setSortBy,
+  onAddListing,
+}) {
   return (
     <header>
       <h1>
-        <span className="logo" role="img">
+        <span className='logo' role='img'>
           ☮
         </span>
         gregslist
       </h1>
-      <Search />
+      <Search
+        setSearchResult={setSearchResult}
+        searchResult={searchResult}
+        onHandleSearchBar={onHandleSearchBar}
+        setSortBy={setSortBy}
+      />
     </header>
   );
 }
